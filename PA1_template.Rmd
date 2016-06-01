@@ -2,7 +2,7 @@
 title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
-    keep_md: true
+    keep_md: yes
 ---
 
 ## Step 1 - Loading and preprocessing the data
@@ -26,6 +26,7 @@ o2<-group_by(orig,date) %>% summarize(Dailysum=sum(steps))
 hist(o2$Dailysum,col="red",xlab="Daily Total Steps Taken",
      main="Daily Total Steps Taken\nOriginal Data",ylab="Frequency")
 ```
+
 Used summary function to determine mean(10770) and median(10760).
 Note the 8 NA's, so these are the mean and median w/o the NA's.
 ```{r mean}
@@ -39,7 +40,8 @@ o3<-group_by(orig,interval) %>% summarize(Dailymean=mean(steps,na.rm=T))
 plot(o3$interval,o3$Dailymean,xlab="Interval ",ylab="Average # Steps Taken",
      main="Average Number of Steps Taken\nAcross All Days",type ="l")
 ```
-Used max function to determine interval containing max number of steps taken
+
+Used max function to determine interval containing max number of steps taken 
 and then subsetting using the daily max. 
 Interval with max number of steps=835 and approx 206 steps taken.
 ```{r max}
@@ -71,6 +73,7 @@ r2<-group_by(rev,date) %>% summarize(Dailysum=sum(steps))
 hist(r2$Dailysum,col="red",xlab="Daily Total Steps Taken",
      main="Daily Total Steps Taken\nAdjusted Data",ylab="Frequency")
 ```
+
 Used summary function to determine mean(10770) and median(10770) of revised data 
 frame. Replacing NA's maintained the mean as expected since the NA's were for 8 
 complete days and the daily sum for the average intervals used to populate the

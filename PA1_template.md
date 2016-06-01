@@ -26,6 +26,7 @@ hist(o2$Dailysum,col="red",xlab="Daily Total Steps Taken",
 ```
 
 ![](PA1_template_files/figure-html/hist of total steps taken-1.png)\
+
 Used summary function to determine mean(10770) and median(10760).
 Note the 8 NA's, so these are the mean and median w/o the NA's.
 
@@ -48,7 +49,8 @@ plot(o3$interval,o3$Dailymean,xlab="Interval ",ylab="Average # Steps Taken",
 ```
 
 ![](PA1_template_files/figure-html/interval-1.png)\
-Used max function to determine interval containing max number of steps taken
+
+Used max function to determine interval containing max number of steps taken 
 and then subsetting using the daily max. 
 Interval with max number of steps=835 and approx 206 steps taken.
 
@@ -99,6 +101,7 @@ hist(r2$Dailysum,col="red",xlab="Daily Total Steps Taken",
 ```
 
 ![](PA1_template_files/figure-html/revised hist-1.png)\
+
 Used summary function to determine mean(10770) and median(10770) of revised data 
 frame. Replacing NA's maintained the mean as expected since the NA's were for 8 
 complete days and the daily sum for the average intervals used to populate the

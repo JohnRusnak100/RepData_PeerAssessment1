@@ -27,6 +27,7 @@ hist(o2$Dailysum,col="red",xlab="Daily Total Steps Taken",
      main="Daily Total Steps Taken\nOriginal Data",ylab="Frequency")
 ```
 Used summary function to determine mean(10770) and median(10760).
+Note the 8 NA's, so these are the mean and median w/o the NA's.
 ```{r mean}
 summary(o2$Dailysum)
 ```
